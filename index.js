@@ -1,20 +1,21 @@
 // TODO: Include packages needed for this application
 
 // TODO: Create an array of questions for user input
-const questions = [];
+//const questions = [];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+//function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-function init() {}
+//function init() {}
 
 // Function call to initialize app
-init();
+//init();
 
 
 const inquirer = require('inquirer');
-//const chalk = require('chalk');
+const fs = require('fs'); 
+
 
 inquirer //.prompt is a method with question objects
   .prompt([
@@ -49,6 +50,11 @@ inquirer //.prompt is a method with question objects
         name: 'guidelines',
     },
     {
+      type: 'input',
+      message: 'Do you want to name any additional contributors?',
+      name: 'contributors',
+  },
+    {
         type: 'input',
         message: 'What is your github username?',
         name: 'username',
@@ -68,6 +74,12 @@ inquirer //.prompt is a method with question objects
 
     //response.confirm === response.password
     console.log(response) //log response object
+   
+    console.log(response.reach);
+
+    fs.writeFile('test.md', JSON.stringify(response), (err) =>
+    err ? console.error(err) : console.log('README generated!')
+  );
     //console.log('response', response)
       //? console.log('Success!')
       //: console.log('You forgot your password already?!')
