@@ -17,8 +17,7 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 
     
-    ```md
-    ![alt text](./assets/terminal.png)
-    ![alt text](./assets/terminal-open.png)
-    ![alt text](./assets/q's.png)
-    ```
+
+![alt text](./assets/terminal.png)
+![alt text](./assets/terminal-open.png)
+![alt text](./assets/q's.png)
