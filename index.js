@@ -78,6 +78,7 @@ inquirer //.prompt is a method with question objects
     console.log(response.reach);
 
     const template = `# ${response.title}
+    
 ## Description
 ${response.description}
 ## Installation
@@ -96,15 +97,9 @@ ${response.email}
 ${response.reach}
 `
     
-    fs.writeFile('test.md', template, (err) =>
+    fs.writeFile('generated-README.md', template, (err) =>
     err ? console.error(err) : console.log('README generated!')
   );
 
-  /* fs.writeFile('test.md', JSON.stringify(response), (err) =>
-    err ? console.error(err) : console.log('README generated!')
-  ); */
 
-    //console.log('response', response)
-      //? console.log('Success!')
-      //: console.log('You forgot your password already?!')
  } );
