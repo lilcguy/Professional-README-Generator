@@ -1,18 +1,17 @@
-# asd
-    
+# Professional README generator
+
 ## Description
-asd
+a tool that can generate a readme file for a project based on user input from a command line
 ## Installation
-asd
+run npm install to get inquirer
 ## Usage
-asd
+run the command node index.js to get started
 ## How to Contribute
-asd
+i have no guidelines
 ## Tests
-asd
+i have no guidelines
 ## Contributors
-asd
+i have no additional contributors
 ## Contact Information
-asd
-asd
-asd
+Github: lilcguy
+thecbradshaw89@gmail.com

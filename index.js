@@ -73,12 +73,12 @@ inquirer //.prompt is a method with question objects
   .then((response) => {
 
     //response.confirm === response.password
-    console.log(response) //log response object
+    //console.log(response) //log response object
    
-    console.log(response.reach);
+    //console.log(response.reach);
 
     const template = `# ${response.title}
-    
+
 ## Description
 ${response.description}
 ## Installation
@@ -92,9 +92,8 @@ ${response.test}
 ## Contributors
 ${response.contributors}
 ## Contact Information
-${response.guser}
+Github: ${response.guser}
 ${response.email}
-${response.reach}
 `
     
     fs.writeFile('generated-README.md', template, (err) =>

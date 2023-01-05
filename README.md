@@ -11,12 +11,10 @@ Open an instance of your terminal, navigate to the project folder in GitBash, ru
 
 ## Usage
 
-Run the command 'node index.js' and go through the series of questions and a README file with your input will be automatically generated! 
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+Open an instance of your terminal, run the command 'node index.js' and go through the series of questions and a README file with your input will be automatically generated! 
 
 
-    
+
 
 ![alt text](./assets/terminal.png)
 ![alt text](./assets/terminal-open.png)
