@@ -42,12 +42,12 @@ inquirer //.prompt is a method with question objects
     {
         type: 'input',
         message: 'What are your contribution guidelines?',
-        name: 'guidelines',
+        name: 'contribution',
     },
     {
         type: 'input',
         message: 'What are your guidelines for testing?',
-        name: 'guidelines',
+        name: 'test',
     },
     {
       type: 'input',
@@ -57,7 +57,7 @@ inquirer //.prompt is a method with question objects
     {
         type: 'input',
         message: 'What is your github username?',
-        name: 'username',
+        name: 'guser',
     },
     {
         type: 'input',
@@ -77,9 +77,33 @@ inquirer //.prompt is a method with question objects
    
     console.log(response.reach);
 
-    fs.writeFile('test.md', JSON.stringify(response), (err) =>
+    const template = `# ${response.title}
+## Description
+${response.description}
+## Installation
+${response.installation}
+## Usage
+${response.usage}
+## How to Contribute
+${response.contribution}
+## Tests
+${response.test}
+## Contributors
+${response.contributors}
+## Contact Information
+${response.guser}
+${response.email}
+${response.reach}
+`
+    
+    fs.writeFile('test.md', template, (err) =>
     err ? console.error(err) : console.log('README generated!')
   );
+
+  /* fs.writeFile('test.md', JSON.stringify(response), (err) =>
+    err ? console.error(err) : console.log('README generated!')
+  ); */
+
     //console.log('response', response)
       //? console.log('Success!')
       //: console.log('You forgot your password already?!')
